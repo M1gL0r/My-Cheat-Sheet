@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors and Specificity</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <h1>CSS Selectors and Specificity Cheat Sheet</h1>
+    <p class="intro">A selector is used to target the specific HTML element(s) to be styled by the declaration.</p>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">SELECTORS</th>
+                <th scope="col">MEANING</th>
+                <th scope="col">EXAMPLE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="row">Universal Selector</td>
+                <td>The <em class="selector">universal selector</em> selects all elements of <em>any</em> type.</td>
+                <td><span class="code">* {}</span><br> Targets all elements on the page.</td>
+            </tr>
+            <tr class="even">
+                <td class="row">Type Selector</td>
+                <td>The <em class="selector">type selector</em> matches the <em>type</em> of the element in the HTML document.</td>
+                <td><span class="code">p, h1, h2 {}</span><br> Targets the <span class="code">&lt;p&gt;, &lt;h1&gt;, &lt;h2&gt;</span> elements.</td>
+            </tr>
+            <tr>
+                <td class="row">Class Selector</td>
+                <td>Matches an element whose <em class="selector">class attribute</em> has a value that matches the one specified after the period (full stop) symbol.</td>
+                <td><span class="code">.row {}</span> <br> Targets any element whose <em class="selector">class attribute</em> has a value of row.<br><span class="code">p.note {}</span> Targets only <span class="code">&lt;p&gt;</span> 
+                        elements whose <em class="selector">class attribute</em> has a value of note.</td>
+            </tr>
+            <tr class="even">
+                <td class="row">ID Selector</td>
+                <td>If an HTML element needs to be styled uniquely, we can give it an ID using the <em class="selector">id attribute</em>.</td>
+                <td><span class="code"># dogs{}</span><br> Targets the element whose <em class="selector">id attribute</em> has a value of dog.</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" class="foot">
+                    <p>You can add <span>! important</span> after any property value to indicate that it should be considered more important than other rules that apply to the same element.
+                    <br>
+                    <br><span>Specificity</span> is the order by which the browser decides which CSS styles will be displayed. A best practice in CSS is to style elements while using the lowest
+                        degree of specificity so that if an element needs a new style, it is easy to override. IDs are the most specific selector in CSS, followed by classes, and finally, type.</p>
+                </td>
+            </tr>
+        </tfoot>           
+    </table>
+</body>
+</html>
